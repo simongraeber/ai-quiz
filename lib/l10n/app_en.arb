@@ -1,0 +1,49 @@
+{
+    "language": "English",
+
+    "infoWelcomePage" : "Welcome to AI Quiz! In this exciting quiz Artificial Intelligence is used to ask you the best questions. On the next page you can create your team and start the game. As with other quizzes, you can choose categories but there is no pre-define here. Choose categories - anything from geography to kitchen appliances is possible! Based on your selection, the AI will ask you the perfect question. Have fun playing!",
+    "aPIRequest": "This quiz uses the OpenAI API. To use it, you need an API key. You can get it here:",
+    "aPIKeyCheckError": "An error occurred while checking the API key:",
+    "aPIKeyCheckErrorTip": "Please check your API key and try again. If the error still occurs, you can see if there is a problem with the API here:",
+    "aPIKeyMissing" : "Please enter an API Key to start the quiz!",
+    "start" : "Start",
+
+    "infoTeamPage" : "Welcome to the team page! Here you can create your teams for the upcoming AI quiz. Just press the \"+\" button to add a new team. If you want to delete a team, you can use the trash icon. When all teams are ready, you can start the quiz by clicking the \"Start\" button. Have fun with the quiz!",
+    "noTeamAdded" : "You must add at least one team! Please add a team by clicking the \"+\" button.",
+    "emptyTeamName" : "The team name must not be empty!",
+    "addTeam" : "Add team",
+    "theTeam" : "Teams",
+    "teamName" : "Team name",
+
+
+    "correct" : "Correct!",
+    "incorrect" : "Unfortunately wrong. The correct answer is:",
+    "no" : "No",
+    "giveThePoints" : "Are you all agreed that the answer was correct and the points should be awarded?",
+    "giveThePointsYes" : "Give points",
+    "cancel" : "Cancel",
+    "questionError" : "An error occurred while loading the question:",
+    "questionErrorTip" : "Das ist mir jetzt peinlich...\nBitte wählt erneut eine Kategorie aus.",
+
+    "infoGamePage" : "Welcome, to the game page! Here the active team can choose a category and difficulty by clicking on \"Choose category\". The active team's card is larger than the other teams' card to highlight the active team. The team is free to choose a category - really anything goes! As soon as the team answers a question, its score is increased. The current round is displayed in the upper left corner. When all teams have answered a question, the round is increased. 'Via the \"\uD83C\uDFC5\"-symbol you will get to the ranking list. Good luck!",
+    "chooseCategory" : "Choose category:",
+    "chooseCategoryHint" : "Nature, sports, history, ...",
+    "chooseDifficulty" : "Choose difficulty:",
+    "chooseDifficultyEasy" : "Easy",
+    "chooseDifficultyMedium" : "Medium",
+    "chooseDifficultyHard" : "Hard",
+    "round" : "Round {round}",
+    "chooseCategoryButton" : "Choose category",
+    "categoryMustNotBeEmpty" : "The category must not be empty! Please choose any text as category.",
+
+
+    "infoRankingPage" : "Congratulations for the award ceremony! Here you can see the placements of the teams based on their points, which are displayed in the table on the right side. After a while, a picture of the award ceremony will also be created, which you can download by clicking the download button. We hope you had fun and feel ready to play another round. When you are ready, you can reload the page in your browser. Thank you for playing!",
+
+    "answerIndexOutOfBound" : "I guess something went wrong. None of the answers are marked as correct. \uD83D\uDE48",
+
+    "explainQuestionPrompt" : "Explain why \"{getRealAnswer}\" is the correct answer to the question \"{questionText}\". Explain in detail why {getWrongAnswers} can be eliminated as possible answers.",
+    "getQuestionPrompt" : "A quiz with questions on different categories and difficulty levels (Easy, Medium, Hard). Each question has 4 answer options A1 to A4 and the number of the correct answer CorrectAnswer. Among the four answer choices, exactly one is correct.\n\nCategory: Geography \nDifficulty: Medium\nQuestion: What is the capital of Morocco?\nA1: Rabat \nA2: Berlin\nA3: Casablanca\nA4: Marrakech\nCorrectAnswer: A1\n\nCategory: Outdoors in the countryside\nDifficulty: Hard \nQuestion: Which plant is a monocotyledon? \nA1: Potato\nA2: Willow\nA3: Oak\nA4: Corn\nCorrectAnswer: A4\n\nCategory: {category}\nDifficulty: {difficulty}"
+
+
+
+}

@@ -1,0 +1,46 @@
+{
+    "language": "Deutsch",
+
+    "infoWelcomePage" : "Herzlich willkommen beim AI-Quiz! In diesem aufregenden Quiz wird Künstliche Intelligenz verwendet, um Ihnen die besten Fragen zu stellen. Auf der nächsten Seite können Sie Ihr Team erstellen und das Spiel beginnen. Wie bei anderen Quizzen können Sie auch hier Kategorien wählen aber hier ist nicht vordefiniert. Wählen Sie Kategorien - von Erdkunde bis zu Küchengeräten ist alles möglich! Basierend auf Ihrer Auswahl wird die KI Ihnen die perfekte Frage stellen. Viel Spaß beim Spielen!",
+    "aPIRequest": "Dieses Quiz benutzt die OpenAI API. Um diese zu nutzen, brauchst du einen API Key. Diesen kannst du hier bekommen:",
+    "aPIKeyCheckError": "Beim Überprüfen des API Key ist ein Fehler aufgetreten:",
+    "aPIKeyCheckErrorTip" : "Bitte überprüfe deinen API Key und versuche es erneut. Wenn der Fehler weiterhin auftritt, kannst du hier sehn ob es ein Problem mit der API gibt:",
+    "aPIKeyMissing" : "Bitte gib einen API Key ein, um das Quiz zu starten!",
+    "start" : "Starten",
+
+    "infoTeamPage" : "Willkommen zur Team-Seite! Hier können Sie Ihre Teams für das anstehende AI-Quiz erstellen. Drücken Sie einfach auf den \"+\"-Button, um ein neues Team hinzuzufügen. Wenn Sie ein Team löschen möchten, können Sie das Papierkorb-Symbol verwenden. Wenn alle Teams bereit sind, können Sie das Quiz starten, indem Sie auf den \"Start\"-Button klicken. Viel Spaß beim Quiz!",
+    "noTeamAdded" : "Du musst mindestens ein Team hinzufügen! Drücke auf den \"+\"-Button, um ein neues Team hinzuzufügen.",
+    "emptyTeamName" : "Der Teamname darf nicht leer sein!",
+    "addTeam" : "Team hinzufügen",
+    "theTeam" : "Teams",
+    "teamName" : "Teamname",
+
+
+    "correct" : "Richtig!",
+    "incorrect" : "Leider falsch. Die richtige Antwort ist:",
+    "no" : "Nein",
+    "giveThePoints" : "Seid ihr euch alle einig dass die Antwort richtig war und die Punkte vergeben werden sollen?",
+    "giveThePointsYes" : "Punkte geben",
+    "cancel" : "Abbrechen",
+    "questionError" : "Beim Laden der Frage ist ein Fehler aufgetreten:",
+    "questionErrorTip" : "Das ist mir jetzt peinlich...\nBitte wählt erneut eine Kategorie aus.",
+
+    "infoGamePage" : "Willkommen, zur Spiel-Seite! Hier kann das aktive Team eine Kategorie und Schwierigkeit auswählen, indem es auf \"Kategorie wählen\" klickt. Die Karte des aktiven Teams ist größer als die Karten der anderen Teams, um das aktive Team hervorzuheben. Das Team kann eine Kategorie frei wählen - es ist wirklich alles möglich! Sobald das Team eine Frage beantwortet hat, wird seine Punktzahl erhöht. Die aktuelle Runde wird oben links angezeigt. Wenn alle Teams eine Frage beantwortet haben, wird die Runde erhöht. 'Über das \"🏅\"-Symbol gelangen Sie zur Rangliste. Viel Glück!",
+    "chooseCategory" : "Kategorie wählen:",
+    "chooseCategoryHint" : "Natur, Sport, Geschichte, ...",
+    "chooseDifficulty" : "Schwierigkeit wählen:",
+    "chooseDifficultyEasy" : "Leicht",
+    "chooseDifficultyMedium" : "Mittel",
+    "chooseDifficultyHard" : "Schwer",
+    "round" : "Runde {round}",
+    "chooseCategoryButton" : "Kategorie wählen",
+    "categoryMustNotBeEmpty" : "Die Kategorie darf nicht leer sein! Bitte trage eine beliebige Kategorie ein.",
+
+    "infoRankingPage" : "Herzlichen Glückwunsch zur Siegerehrung! Hier werden die Platzierungen der Teams basierend auf ihren Punkten angezeigt, die in der Tabelle auf der rechten Seite angezeigt werden. Nach einer Weile wird auch ein Bild der Siegerehrung erstellt, das Sie über den Download-Button herunterladen können. Wir hoffen, dass Sie viel Spaß hatten und sich bereit fühlen, eine weitere Runde zu spielen. Wenn Sie bereit sind, können Sie die Seite in Ihrem Browser neu laden. Vielen Dank fürs Spielen!",
+
+    "answerIndexOutOfBound" : "Da ist wohl etwas schief gelaufen. Keine der Antworten ist als richtig markiert. \uD83D\uDE48",
+
+    "explainQuestionPrompt" : "Erkläre warum \"{getRealAnswer}\" die richtige Antwort auf die Frage \"{questionText}\" ist. Erkläre ausführlich warum {getWrongAnswers} als Antworten ausgeschlossen werden können.",
+    "getQuestionPrompt" : "Ein Quiz mit Fragen zu verschiedenen Kategorien und Schwierigkeitslevel (Leicht, Mittel, Schwer) jede Frage hat 4 Antwortmöglichkeiten A1 bis A4 und die Nummer der richtigen Antwort CorrectAnswer. Unter den vier Antwortmöglichkeiten ist genau eine richtig.\n\nCategory: Erdkunde \nDifficulty: Mittel\nQuestion: Was ist die Hauptstadt von Marokko?\nA1: Rabat \nA2: Berlin\nA3: Casablanca\nA4: Marrakesch\nCorrectAnswer: A1\n\nCategory: Draußen im Grünen\nDifficulty: Sehr schwer \nQuestion: Welche Pflanze ist eine Monokotyledone? \nA1: Kartoffel\nA2: Weide\nA3: Eiche\nA4: Mais\nCorrectAnswer: A4\n\nCategory: {category}\nDifficulty: {difficulty}"
+}
+
