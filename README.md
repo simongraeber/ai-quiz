@@ -1,8 +1,8 @@
 # AI Quiz
-This is an [AI Quiz](ai-quiz.de) App that uses GPT-3 to generate questions.
+This is an [AI Quiz](https://ai-quiz.de) App that uses GPT-3 to generate questions.
 
 ## How to Play
-1. Go to [ai-quiz.de](ai-quiz.de)
+1. Go to [ai-quiz.de](https://ai-quiz.de)
 2. Click on "Start" and enter a valid  [OpenAI API Key](https://platform.openai.com/account/api-keys)
 3. Create Teams: On the Team page, you can add teams by clicking on the "+" button. To delete a team, use the trashcan symbol. When you have created all the teams you need, click the "Start" button to begin the game.
 4. Choose Categories and Difficulty: On the Game page, the active team can select a category and difficulty level by clicking on "Choose Category." The active team's card is larger than the other teams' cards. The category can be freely chosen, so it can be anything you like.
@@ -11,12 +11,13 @@ This is an [AI Quiz](ai-quiz.de) App that uses GPT-3 to generate questions.
 7. Restart Game: To start a new game, simply refresh the page in your browser.
 
 ## Screenshots
-![Start Page](assets/screenshots/StartPage.jpeg)
-![Team Page](assets/screenshots/TeamPage.png)
-![Game Page](assets/screenshots/GamePage.png)
-![Question Page](assets/screenshots/QuestionPage.png)
-![Game Page](assets/screenshots/GamePage.png)
-![Ranking Page](assets/screenshots/RankingPage.png)
+![Start Page](assets/screenshots/start_page.png)
+![Team Page](assets/screenshots/team_page.png)
+![Game Page](assets/screenshots/game_page.png)
+![Question Page](assets/screenshots/question_page.png)
+![Question Page Info](assets/screenshots/question_page_info.png)
+![Game Page](assets/screenshots/game_page.png)
+![Award Ceremony Page](assets/screenshots/award_ceremony_page.png)
 
 
 ## Requirements
@@ -33,12 +34,20 @@ This is an [AI Quiz](ai-quiz.de) App that uses GPT-3 to generate questions.
 
 ## Technologies Used
 - [Flutter](https://flutter.dev/) for the app
-- [OpenAI API](https://openai.com/) for Text completion Image generation and editing. The Project uses GPT-3 and DALL-E.
+- [OpenAI API](https://openai.com/) for Text completion and Image generation and editing. The Project uses GPT-3 and DALL-E.
 - [dart:http](https://pub.dev/packages/http) for HTTP requests
 - [image](https://pub.dev/packages/image) for image manipulation
 
+## To Do
+- add settings
+- save game state in local storage
+- refine animation in the award ceremony page
+
 ## How to Contribute
 Feel free to open a pull request or an issue if you find a bug or have a feature request!
+
+## License
+This project is licensed under the MIT License feel free to use it in your own projects.
 
 ## Credits
 This project was created by [Simon Graeber](https://github.com/simongraeber)
