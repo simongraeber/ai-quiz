@@ -60,7 +60,7 @@ Future<Uint8List> getPodiumImage(List<Team> teams) async {
 /// [teams] the teams the first 3 teams will be used
 /// [background] the background image that will be modified
 /// returns the modified background image
-Future<Uint8List> getPodiumImageWithOpenAI( // todo: bug safari??
+Future<Uint8List> getPodiumImageWithOpenAI(
     List<Team> teams, Uint8List background) async {
   ByteData maskBytes = ByteData(0);
 

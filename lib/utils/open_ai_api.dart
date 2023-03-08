@@ -97,16 +97,28 @@ class OpenAIApi {
     } catch(e){
       return Future.error(e.toString());
     }
-    try{ // try to parse the question
+    try{
+      // try to parse the question
+      // the expected format is:
+      // Question: Question text
+      // Answer: Correct answer
+      // WrongAnswers:
+      // 1: Wrong answer 1
+      // 2: Wrong answer 2
+      // 3: Wrong answer 3
       List<String> lines = questionAndAnswerText.split("\n");
       String questionText = lines[0].split("estion:")[1].trim();
-      String answerText01 = lines[3].split(":")[1].trim();
-      String answerText02 = lines[4].split(":")[1].trim();
-      String answerText03 = lines[5].split(":")[1].trim();
-      String answerText04 = lines[6].split(":")[1].trim();
-      int correctAnswer = int.parse(lines[7].split(":")[1].trim().substring(1));
-      return Question(questionText, answerText01, answerText02, answerText03,
-          answerText04, correctAnswer);
+      String answerText = lines[1].split("swer:")[1].trim();
+      String wrongAnswerText1 = lines[3].split("1:")[1].trim();
+      String wrongAnswerText2 = lines[4].split("2:")[1].trim();
+      String wrongAnswerText3 = lines[5].split("3:")[1].trim();
+      // shuffle the answers
+      List<String> answers = [answerText, wrongAnswerText1, wrongAnswerText2, wrongAnswerText3];
+      answers.shuffle();
+      // get the index of the correct answer + 1
+      int correctAnswer = answers.indexOf(answerText) + 1;
+      return Question(questionText, answers[0], answers[1], answers[2],
+          answers[3], correctAnswer);
     } catch(e){
       return Future.error("The OpenAI API returned an invalid question. Please try again.");
 
@@ -133,6 +145,7 @@ class OpenAIApi {
     getImagesChat.addMessageUser("Describe a charcoal drawing for the question \"${q.questionText}\".");
 
     String imageText = await _getChatAnswer(getImagesChat, 500);
+
     Uint8List image = await _getImage(imageText, 512);
     return image;
   }

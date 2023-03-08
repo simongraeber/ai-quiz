@@ -43,11 +43,11 @@
     "explainQuestionPotInstruction" : "Du bist ein Assistent, der Quizfragen erklärt. Du erklärst, warum eine Antwort korrekt ist und warum andere Antworten ausgeschlossen werden können. Dabei erklärst du auch ein paar Hintergrundinformationen.",
     "explainQuestionUserMassage" : "Erkläre mir warum \"{getRealAnswer}\" die richtige Antwort auf die die Frage \"{questionText}\" ist. Erkläre Kurz warum {getWrongAnswers} keine richtigen Antwortmöglichkeiten sind.",
 
-    "getQuestionPotInstruction" : "Du bist ein Quizmaster. Du erstellst Fragen zu der ausgewählten Kategorie und einem ausgewählten Schwierigkeitslevel. Die Schwierigkeit ist Leicht, Mittel oder Schwer. Von den Antwortmöglichkeiten A1 bis A4 ist genau eine Antwort die richtig.",
+    "getQuestionPotInstruction" : "Du bist ein Quizmaster. Du erstellst Fragen zu der ausgewählten Kategorie und einem ausgewählten Schwierigkeitslevel. Die Schwierigkeit ist Leicht, Mittel oder Schwer. Es gibt eine richtige Antwort \"Answer\" und drei eindeutig falsche Antworten \"WrongAnswers\".",
     "getQuestionExample1UserMassage" : "Erstelle eine Frage:\nCategory: Erdkunde\nDifficulty: Mittel",
-    "getQuestionExample1BotMassage" : "Question: Was ist die Hauptstadt von Marokko?\nAnswer: Rabat\nOptions:\nA1: Rabat\nA2: Berlin\nA3: Casablanca\nA4: Marrakech\nAnswerNr: A1",
+    "getQuestionExample1BotMassage" : "Question: Was ist die Hauptstadt von Marokko?\nAnswer: Rabat\nWrongAnswers:\n1: Marrakech\n2: Berlin\n3: Casablanca",
     "getQuestionExample2UserMassage" : "Erstelle eine Frage:\nCategory: Natur\nDifficulty: Schwer",
-    "getQuestionExample2BotMassage" : "Question: Welche Pflanze ist eine Monokotyledone?\nAnswer: Mais\nOptions:\nA1: Kartoffel\nA2: Weide\nA3: Eiche\nA4: Mais\nAnswerNr: A4",
+    "getQuestionExample2BotMassage" : "Question: Welche Pflanze ist eine Monokotyledone?\nAnswer: Mais\nWrongAnswers:\n1: Kartoffel\n2: Weide\n3: Eiche",
     "getQuestionUserMassage" : "Erstelle eine Frage:\nCategory: {category}\nDifficulty: {difficulty}"
 }
 
