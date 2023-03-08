@@ -40,7 +40,14 @@
 
     "answerIndexOutOfBound" : "Da ist wohl etwas schief gelaufen. Keine der Antworten ist als richtig markiert. \uD83D\uDE48",
 
-    "explainQuestionPrompt" : "Erkläre warum \"{getRealAnswer}\" die richtige Antwort auf die Frage \"{questionText}\" ist. Erkläre ausführlich warum {getWrongAnswers} als Antworten ausgeschlossen werden können.",
-    "getQuestionPrompt" : "Ein Quiz mit Fragen zu verschiedenen Kategorien und Schwierigkeitslevel (Leicht, Mittel, Schwer) jede Frage hat 4 Antwortmöglichkeiten A1 bis A4 und die Nummer der richtigen Antwort CorrectAnswer. Unter den vier Antwortmöglichkeiten ist genau eine richtig.\n\nCategory: Erdkunde \nDifficulty: Mittel\nQuestion: Was ist die Hauptstadt von Marokko?\nA1: Rabat \nA2: Berlin\nA3: Casablanca\nA4: Marrakesch\nCorrectAnswer: A1\n\nCategory: Draußen im Grünen\nDifficulty: Sehr schwer \nQuestion: Welche Pflanze ist eine Monokotyledone? \nA1: Kartoffel\nA2: Weide\nA3: Eiche\nA4: Mais\nCorrectAnswer: A4\n\nCategory: {category}\nDifficulty: {difficulty}"
+    "explainQuestionPotInstruction" : "Du bist ein Assistent, der Quizfragen erklärt. Du erklärst, warum eine Antwort korrekt ist und warum andere Antworten ausgeschlossen werden können. Dabei erklärst du auch ein paar Hintergrundinformationen.",
+    "explainQuestionUserMassage" : "Erkläre mir warum \"{getRealAnswer}\" die richtige Antwort auf die die Frage \"{questionText}\" ist. Erkläre Kurz warum {getWrongAnswers} keine richtigen Antwortmöglichkeiten sind.",
+
+    "getQuestionPotInstruction" : "Du bist ein Quizmaster. Du erstellst Fragen zu der ausgewählten Kategorie und einem ausgewählten Schwierigkeitslevel. Die Schwierigkeit ist Leicht, Mittel oder Schwer. Von den Antwortmöglichkeiten A1 bis A4 ist genau eine Antwort die richtig.",
+    "getQuestionExample1UserMassage" : "Erstelle eine Frage:\nCategory: Erdkunde\nDifficulty: Mittel",
+    "getQuestionExample1BotMassage" : "Question: Was ist die Hauptstadt von Marokko?\nAnswer: Rabat\nOptions:\nA1: Rabat\nA2: Berlin\nA3: Casablanca\nA4: Marrakech\nAnswerNr: A1",
+    "getQuestionExample2UserMassage" : "Erstelle eine Frage:\nCategory: Natur\nDifficulty: Schwer",
+    "getQuestionExample2BotMassage" : "Question: Welche Pflanze ist eine Monokotyledone?\nAnswer: Mais\nOptions:\nA1: Kartoffel\nA2: Weide\nA3: Eiche\nA4: Mais\nAnswerNr: A4",
+    "getQuestionUserMassage" : "Erstelle eine Frage:\nCategory: {category}\nDifficulty: {difficulty}"
 }
 

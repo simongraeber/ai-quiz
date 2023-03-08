@@ -41,9 +41,13 @@
 
     "answerIndexOutOfBound" : "I guess something went wrong. None of the answers are marked as correct. \uD83D\uDE48",
 
-    "explainQuestionPrompt" : "Explain why \"{getRealAnswer}\" is the correct answer to the question \"{questionText}\". Explain in detail why {getWrongAnswers} can be eliminated as possible answers.",
-    "getQuestionPrompt" : "A quiz with questions on different categories and difficulty levels (Easy, Medium, Hard). Each question has 4 answer options A1 to A4 and the number of the correct answer CorrectAnswer. Among the four answer choices, exactly one is correct.\n\nCategory: Geography \nDifficulty: Medium\nQuestion: What is the capital of Morocco?\nA1: Rabat \nA2: Berlin\nA3: Casablanca\nA4: Marrakech\nCorrectAnswer: A1\n\nCategory: Outdoors in the countryside\nDifficulty: Hard \nQuestion: Which plant is a monocotyledon? \nA1: Potato\nA2: Willow\nA3: Oak\nA4: Corn\nCorrectAnswer: A4\n\nCategory: {category}\nDifficulty: {difficulty}"
+    "explainQuestionPotInstruction" : "You are an assistant who explains quiz questions. You explain why an answer is correct and why other answers can be excluded. You also explain some background information.",
+    "explainQuestionUserMassage" : "Explain why \"{getRealAnswer}\" the correct answer to the question \"{questionText}\". Explain why {getWrongAnswers} are not correct answers.",
 
-
-
+    "getQuestionPotInstruction" : "You are a quizmaster. You create questions for the selected category and a selected difficulty level. The difficulty is Easy, Medium or Hard. From the answer options A1 to A4 exactly one answer is the correct one.",
+    "getQuestionExample1UserMassage" : "Create a question:\nCategory: Earth science\nDifficulty: Medium",
+    "getQuestionExample1BotMassage" : "Question: What is the capital of Morocco?\nAnswer: Rabat\nOptions:\nA1: Rabat\nA2: Berlin\nA3: Casablanca\nA4: Marrakesch\nAnswerNr: A1",
+    "getQuestionExample2UserMassage" : "Create a question:\nCategory: Natur\nDifficulty: Hard",
+    "getQuestionExample2BotMassage" : "Question: Which plant is a monocotyledon?\nAnswer: Corn\nOptions:\nA1: Potato\nA2: pasture\nA3: Oak\nA4: Corn\nAnswerNr: A4",
+    "getQuestionUserMassage" : "Create a question:\nCategory: {category}\nDifficulty: {difficulty}"
 }

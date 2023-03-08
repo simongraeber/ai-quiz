@@ -276,7 +276,6 @@ class _QuestionPageState extends State<QuestionPage> {
         _focusNode4,
       ];
       if (event.runtimeType == RawKeyDownEvent) {
-        print("key pressed");
         if(_selectedButton == -1){
           _selectedButton = 0;
           focusNodes[_selectedButton].requestFocus();
