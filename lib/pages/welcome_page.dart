@@ -155,7 +155,7 @@ class _WelcomePageState extends State<WelcomePage> {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content:
-          Text(AppLocalizations.of(context)!.aPIKeyMissing),
+          Text(AppLocalizations.of(context)!.aPIKeyMissing, style: Theme.of(context).textTheme.bodyMedium,),
         ),
       );
       return false;

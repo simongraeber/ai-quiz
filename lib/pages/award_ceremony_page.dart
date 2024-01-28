@@ -49,9 +49,9 @@ class _AwardPageState extends State<AwardPage>
       child: Card(
         child: ListTile(
           tileColor: Theme.of(context).canvasColor,
-          leading: Text(place.toString()),
-          title: Text(teamName),
-          trailing: Text(points.toString()),
+          leading: Text(place.toString(), style: Theme.of(context).textTheme.titleMedium,),
+          title: Text(teamName, style: Theme.of(context).textTheme.titleMedium,),
+          trailing: Text(points.toString(), style: Theme.of(context).textTheme.titleMedium,),
         ),
       ),
     );

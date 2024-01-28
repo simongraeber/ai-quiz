@@ -76,7 +76,7 @@ class _TeamPageState extends State<TeamPage> {
                     return Card(
                       child: ListTile(
                         tileColor: Theme.of(context).canvasColor,
-                        title: Text(teams[index].name),
+                        title: Text(teams[index].name, style: Theme.of(context).textTheme.bodyMedium,),
                         trailing: IconButton(
                           icon: Icon(Icons.delete,
                               color: Colors.red.withOpacity(0.5)),
@@ -103,7 +103,7 @@ class _TeamPageState extends State<TeamPage> {
                 onInactivePressed: () {
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
-                      content: Text(AppLocalizations.of(context)!.noTeamAdded),
+                      content: Text(AppLocalizations.of(context)!.noTeamAdded, style: Theme.of(context).textTheme.bodyMedium,),
                     ),
                   );
                 },
@@ -133,8 +133,8 @@ class _TeamPageState extends State<TeamPage> {
             if (!context.mounted) return; // if the context is not mounted anymore return
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
-                content: Text(AppLocalizations.of(context)!.emptyTeamName),
-              ),
+                content: Text(AppLocalizations.of(context)!.emptyTeamName, style: Theme.of(context).textTheme.bodyMedium,)
+              )
             );
           }
         },

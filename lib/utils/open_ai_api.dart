@@ -28,7 +28,9 @@ class OpenAIApi {
   Future<void> setAPIKey(String key) async {
     _aPIKey = key;
     try{
-      await _getText("say hi", 10); // test if the key is valid
+      Chat chat = Chat("Translate to German");
+      chat.addMessageUser("hi");
+      await _getChatAnswer(chat, 10);
     } catch(e){
       _aPIKey = null;
       rethrow;
@@ -52,7 +54,7 @@ class OpenAIApi {
     String imageText = await _getChatAnswer(getImagesChat, 500);
 
     // get the image
-    Uint8List image = await _getImage(imageText, 512);
+    Uint8List image = await _getImage(imageText, 1024, 'dall-e-3');
 
     // return the image and the description
     return ImageWithDescription(image, imageText);
@@ -214,8 +216,8 @@ class OpenAIApi {
 
   /// Generates a Image with the OpenAI API Image generations endpoint see https://platform.openai.com/docs/guides/images/usage
   /// based on the description in [prompt]
-  /// [size] is the size of the image in pixels must be 256, 512, or 1024.
-  Future<Uint8List> _getImage(String prompt, int size) async {
+  /// [size] is the size of the image in pixels must be 256, 512, or 1024. for dall e 2 and 1024 for dall e 3
+  Future<Uint8List> _getImage(String prompt, int size, [String model='dall-e-2']) async {
     http.Response response = await http.post(
       Uri.parse('https://api.openai.com/v1/images/generations'),
       headers: <String, String>{
@@ -223,6 +225,7 @@ class OpenAIApi {
         'Content-Type': 'application/json',
       },
       body: jsonEncode(<String, dynamic>{
+        "model": model,
         'size': '${size}x$size',
         'n': 1, // just  get one image
         'prompt': prompt,
@@ -262,36 +265,6 @@ class OpenAIApi {
       Map<String, dynamic> data = jsonDecode(body);
       String massageText =  data["choices"][0]["message"]["content"];
       return massageText;
-    } else {
-      throw Exception(['http.post error', response.statusCode, response.body]);
-    }
-  }
-
-  // this function is now only used for testing the Api key
-  // _getChatAnswer is used for all other tasks instead
-  /// Generates text from the OpenAI API Text completions endpoint see https://platform.openai.com/docs/guides/completion/
-  /// using the given [prompt] limit of [maxTokens] controls the maximum length of the generated text
-  /// [model] is the model to be used see https://platform.openai.com/docs/models/gpt-3 by default it is text-davinci-003
-  /// the [temperature] controls the randomness of the generated text by default it is 0.4
-  /// returns the generated text
-  Future<String> _getText(String prompt, int maxTokens, [String? model, double? temperature]) async {
-    http.Response response = await http.post(
-      Uri.parse('https://api.openai.com/v1/completions'),
-      headers: <String, String>{
-        'Authorization': 'Bearer $_aPIKey',
-        'Content-Type': 'application/json; charset=utf-8',
-      },
-      body: jsonEncode(<String, dynamic>{
-        'model': model ?? 'text-davinci-003',
-        'prompt': prompt,
-        'max_tokens': maxTokens,
-        'temperature': temperature ?? 0.4,
-      }),
-    );
-    if (response.statusCode == 201 || response.statusCode == 200) {
-      String body = utf8.decode(response.bodyBytes);
-      Map<String, dynamic> data = jsonDecode(body);
-      return data["choices"][0]["text"].trim();
     } else {
       throw Exception(['http.post error', response.statusCode, response.body]);
     }

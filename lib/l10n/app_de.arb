@@ -26,7 +26,7 @@
     "questionErrorTip" : "Das ist mir jetzt peinlich...\nBitte wählt erneut eine Kategorie aus.",
 
     "infoGamePage" : "Willkommen, zur Spiel-Seite! Hier kann das aktive Team eine Kategorie und Schwierigkeit auswählen, indem es auf \"Kategorie wählen\" klickt. Die Karte des aktiven Teams ist größer als die Karten der anderen Teams, um das aktive Team hervorzuheben. Das Team kann eine Kategorie frei wählen - es ist wirklich alles möglich! Sobald das Team eine Frage beantwortet hat, wird seine Punktzahl erhöht. Die aktuelle Runde wird oben links angezeigt. Wenn alle Teams eine Frage beantwortet haben, wird die Runde erhöht. 'Über das \"🏅\"-Symbol gelangen Sie zur Rangliste. Viel Glück!",
-    "chooseCategory" : "Kategorie wählen:",
+    "chooseCategory" : "Kategorie wählen:\ndu kannst wirklich alles wählen!",
     "chooseCategoryHint" : "Natur, Sport, Geschichte, ...",
     "chooseDifficulty" : "Schwierigkeit wählen:",
     "chooseDifficultyEasy" : "Leicht",

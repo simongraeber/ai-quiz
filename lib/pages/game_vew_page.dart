@@ -139,7 +139,7 @@ class _GameVewState extends State<GameVew> {
       if (!context.mounted) return; // if the context is not mounted anymore return
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text(AppLocalizations.of(context)!.categoryMustNotBeEmpty),
+          content: Text(AppLocalizations.of(context)!.categoryMustNotBeEmpty, style: Theme.of(context).textTheme.bodyMedium),
         ),
       );
 

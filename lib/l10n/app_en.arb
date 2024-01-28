@@ -33,7 +33,7 @@
     "chooseDifficultyMedium" : "Medium",
     "chooseDifficultyHard" : "Hard",
     "round" : "Round {round}",
-    "chooseCategoryButton" : "Choose category",
+    "chooseCategoryButton" : "Choose category\nyou can choose any category",
     "categoryMustNotBeEmpty" : "The category must not be empty! Please choose any text as category.",
 
 
